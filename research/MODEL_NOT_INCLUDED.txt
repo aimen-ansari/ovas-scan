@@ -1,0 +1,1 @@
+The supplied notebook saves model weights in Google Drive. No .pth, .pt, .onnx, or .h5 files were attached. Place efficientnet_b3_best.pth in backend/models to enable inference. Never substitute untrained weights.

@@ -1,0 +1,48 @@
+{
+  "source": "Ovarian_US_Dataset (2).ipynb",
+  "model": "efficientnet_b3",
+  "classes": [
+    "complex_cyst",
+    "dominant_follicle",
+    "healthy",
+    "poly_cyst",
+    "simple_cyst"
+  ],
+  "input_size": [
+    224,
+    224
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "resize": "PIL bilinear via torchvision.Resize",
+  "optimizer": "Adam",
+  "learning_rate": 0.0001,
+  "loss": "CrossEntropyLoss",
+  "batch_size": 32,
+  "epochs": 10,
+  "seed": 42,
+  "total_parameters": 10703917,
+  "trainable_parameters": 3884799,
+  "split": {
+    "train": 4813,
+    "validation": 1031,
+    "test": 1032
+  },
+  "augmentation": [
+    "RandomHorizontalFlip(p=0.5)",
+    "RandomRotation(degrees=10)"
+  ],
+  "fine_tuning": "Last two feature blocks and classifier",
+  "gradcam_target": "features[-1]",
+  "checkpoint": "efficientnet_b3_best.pth",
+  "checkpoint_included": false,
+  "clinical_validation": false
+}
